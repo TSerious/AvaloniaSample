@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	</PropertyGroup>
+	<ItemGroup>
+		<Compile Update="**\*.xaml.cs">
+			<DependentUpon>%(Filename)</DependentUpon>
+		</Compile>
+		<AvaloniaResource Include="**\*.xaml">
+			<SubType>Designer</SubType>
+		</AvaloniaResource>
+		<AvaloniaResource Include="Assets\*" />
+		<AvaloniaResource Include="Assets\Fonts\*" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\Avalonia\src\Avalonia.ReactiveUI\Avalonia.ReactiveUI.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Views\" />
+	</ItemGroup>
+	<Import Project="..\Avalonia\build\BuildTargets.targets" />
+</Project>

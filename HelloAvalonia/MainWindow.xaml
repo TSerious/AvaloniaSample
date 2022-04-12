@@ -1,0 +1,14 @@
+<Window x:Class="HelloAvalonia.MainWindow"
+        xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:HelloAvalonia"
+		x:Name="MainWindow"
+		Title="Hello Avalonia"
+		Icon="/Assets/icon.ico"
+        Width="1024"
+        Height="800"
+        MinWidth="500"
+        MinHeight="300"
+		WindowState="{Binding WindowState, Mode=TwoWay}">
+	<local:MainView/>
+</Window>
